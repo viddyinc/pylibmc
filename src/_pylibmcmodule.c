@@ -749,7 +749,7 @@ static PyObject *_PylibMC_RunSetCommandSingle(PylibMC_Client *self,
 
     pylibmc_mset serialized = { NULL };
 
-    success = _PylibMC_SerializeValue(key, NULL, value, time, &serialized, self, &serialized);
+    success = _PylibMC_SerializeValue(key, NULL, value, time, self, &serialized);
 
     if (!success)
         goto cleanup;
