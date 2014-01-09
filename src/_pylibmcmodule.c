@@ -466,7 +466,7 @@ static PyObject *_PylibMC_parse_memcached_value(char *value, size_t size,
     }
 #endif
 
-    retval = NULL
+    retval = NULL;
 
     switch (dtype) {
         case PYLIBMC_FLAG_INTEGER:
@@ -2192,7 +2192,6 @@ static PyObject *_PylibMC_Unpickle(const char *buff, size_t size, PylibMC_Client
 }
 
 static PyObject *_PylibMC_Pickle(PyObject *val, PylibMC_Client *client) {
-    PyObject *pickle_dump;
     PyObject *retval = NULL;
 
     if (client->pickler != NULL) {
